@@ -18,7 +18,7 @@
  
 class fast {
 
-	public $cfg;
+	public $config = array();
 	public $Db;
 
 	
@@ -28,9 +28,19 @@ class fast {
 	}
 
 	public function getVersion() {
-		return "0.1 (150406#001)";
+		return $this->config["version"];
+	}
+	
+	//da qui dovrei caricare il controller che gestisce l'oggetto
+	
+	public function load($fast) {
+	
+		include_once(__DIR__ . "/../views/header.php");
+		include(__DIR__ . "/../views/" . $this->controller . ".php");
+		include_once(__DIR__ . "/../views/footer.php");
+	
 	}
 	
 }
- 
- 
+
+$fast = new fast();

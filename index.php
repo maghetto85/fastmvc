@@ -17,18 +17,7 @@
  */
 
 	require_once(__DIR__ . "/app/core/fast.php");
+	require_once(__DIR__ . "/app/config/config.php");
   
-    $rt = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');
-	
-	$fast = new fast();
-	$fast->page_title = "Home Page";
-	
-	include_once(__DIR__ . "/app/views/header.php");
-?>
-    <body>
-        <h2>Coming Soon!</h2>
-        <p>Requested Page: <?php echo $rt; ?></p>
-    </body>
-<?php		
-	include_once(__DIR__ . "/app/views/footer.php");
-
+    $fast->controller = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');	
+	$fast->load($fast);
