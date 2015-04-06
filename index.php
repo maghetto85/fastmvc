@@ -16,8 +16,8 @@
  *
  */
 
-	require_once(__DIR__ . "/app/core/fast.php");
-	require_once(__DIR__ . "/app/config/config.php");
+    require_once(__DIR__ . "/app/core/fast.php");
+    require_once(__DIR__ . "/app/config/config.php");
   
     $fast->controller = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');	
-	$fast->load($fast);
+    $fast->load($fast);
