@@ -16,20 +16,12 @@
  *
  */
 
-	require_once(__DIR__ . "/app/core/fast.php");
-  
-    $rt = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>FAST MVC FRAMEWORK <?= fast::getVersion(); ?></title>
-    </head>
-    <body>
-        <h2>Coming Soon!</h2>
-        <p>Requested Page: <?php echo $rt; ?></p>
-    </body>
-</html>
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
 
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 
+header("Location: ../");
+exit;

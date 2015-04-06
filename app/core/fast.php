@@ -15,21 +15,22 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+ 
+class fast {
 
-	require_once(__DIR__ . "/app/core/fast.php");
-  
-    $rt = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>FAST MVC FRAMEWORK <?= fast::getVersion(); ?></title>
-    </head>
-    <body>
-        <h2>Coming Soon!</h2>
-        <p>Requested Page: <?php echo $rt; ?></p>
-    </body>
-</html>
+	public $cfg;
+	public $Db;
 
+	
+	function __construct() {
+		return true;
+	
+	}
 
+	public function getVersion() {
+		return "0.1 (150406#001)";
+	}
+	
+}
+ 
+ 
