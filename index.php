@@ -19,17 +19,16 @@
 	require_once(__DIR__ . "/app/core/fast.php");
   
     $rt = (isset($_GET['rt']) ? $rt = $_GET['rt'] : 'index');
+	
+	$fast = new fast();
+	$fast->page_title = "Home Page";
+	
+	include_once(__DIR__ . "/app/views/header.php");
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>FAST MVC FRAMEWORK <?= fast::getVersion(); ?></title>
-    </head>
     <body>
         <h2>Coming Soon!</h2>
         <p>Requested Page: <?php echo $rt; ?></p>
     </body>
-</html>
-
+<?php		
+	include_once(__DIR__ . "/app/views/footer.php");
 
